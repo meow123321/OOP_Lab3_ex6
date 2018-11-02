@@ -11,7 +11,7 @@ public:
 	string author;
 	string publishing_house;
 	string ISBN;
-	int aparence_year;
+	int apparence_year;
 	int price;
 
 	bool check_title(string title) {
@@ -52,7 +52,7 @@ public:
 	}
 
 	void setYear(int aparence_year) {
-		this->aparence_year = aparence_year;
+		this->apparence_year = aparence_year;
 	}
 
 	void setPrice(int price) {
@@ -72,11 +72,27 @@ int main() {
 	int price_aux, ap_year_aux;
 	int title_count, author_count, ISBN_count;
 	
-	cin >> title_to_find >> author_to_find >> ISBN_to_find;
+	
 
 	for (int i = 0; i < 2; i++) {
+	
+		cout << "Enter the title:";
+		cin >> title_aux; 
 
-		cin >> title_aux >> author_aux >> pub_house_aux >> ISBN_aux >> price_aux >> ap_year_aux;
+		cout << "Enter th author: ";
+		cin >> author_aux;
+
+		cout << "Enter the publishing house: ";
+		cin >> pub_house_aux;
+
+		cout << "Enter the ISBN code: ";
+		cin >> ISBN_aux;
+
+		cout << "Enter the price of the book:";
+		cin >> price_aux;
+
+		cout << "Enter the year of the apparence:";
+		cin >> ap_year_aux ;
 
 		library[i].setTitle(title_aux);
 		library[i].setAuthor(author_aux);
@@ -89,6 +105,13 @@ int main() {
 	title_count = 0;
 	author_count = 0;
 	ISBN_count = 0;
+
+	cout << "Enter the title of the book you search: ";
+	cin >> title_to_find;
+	cout << "Enter the author  of the book you search : ";
+	cin >> author_to_find;
+	cout << "Enter the ISBN code of the book you search: ";
+	cin >> ISBN_to_find;
 
 	for(int i = 0; i < 2; i++){
 
@@ -105,9 +128,9 @@ int main() {
 		}
 	}
 
-	cout << "THe totle has been found " << title_count << " times";
-
-
+	cout << "THe title has been found " << title_count << " times";
+	cout << "The author has been found " << author_count << " times";
+	cout << "The ISBN code has been found " << ISBN_count << " times";
 
 	system("pause");
 	return 0;
