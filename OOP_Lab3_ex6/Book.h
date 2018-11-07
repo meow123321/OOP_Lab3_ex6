@@ -13,7 +13,7 @@ public:
 	string publishing_house;
 	string ISBN;
 	int apparence_year;
-	int price;
+	double price;
 
 	bool check_title(string title) {
 		if (title == this->title)
@@ -33,32 +33,7 @@ public:
 		return 0;
 	}
 
-	string getTitle() {
-		return title;
-	}
-	void setTitle(string title) {
-		this->title = title;
-	}
-
-	void setAuthor(string author) {
-		this->author = author;
-	}
-
-	void setPublish(string publishing_house) {
-		this->publishing_house = publishing_house;
-	}
-
-	void setISBN(string ISBN) {
-		this->ISBN = ISBN;
-	}
-
-	void setYear(int aparence_year) {
-		this->apparence_year = aparence_year;
-	}
-
-	void setPrice(int price) {
-		this->price = price;
-	}
+	Book(string title_aux, string author_aux, string publishing_house_aux, string ISBN_aux, int apparence_year_aux, double price_aux);
 
 
 
