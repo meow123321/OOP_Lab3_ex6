@@ -2,6 +2,7 @@
 
 #include<iostream>
 #include<string>
+#include<vector>
 
 using namespace std;
  
@@ -15,27 +16,17 @@ public:
 	int apparence_year;
 	double price;
 
-	bool check_title(string title) {
-		if (title == this->title)
-			return 1;
-		return 0;
-	}
+	// The functions that check if the title/author/ISBN are in the
+	bool check_title(string title);
+	bool check_author(string author);
+	bool check_ISBN(string ISBN);
 
-	bool check_author(string author) {
-		if (author == this->author)
-			return 1;
-		return 0;
-	}
-
-	bool check_ISBN(string ISBN) {
-		if (ISBN == this->ISBN)
-			return 1;
-		return 0;
-	}
-
-	Book(string title_aux, string author_aux, string publishing_house_aux, string ISBN_aux, int apparence_year_aux, double price_aux);
-
-
+	//the default Constructor
+	Book();
+	//the parameterized constructors
+	Book(string title, string author, string publishing_house, string ISBN, int apparence_year, double price); 
+	// the destructor
+	~Book(); 
 
 };
 

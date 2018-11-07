@@ -1,12 +1,36 @@
 #include"Book.h"
 
-Book::Book(string title_aux, string author_aux, string publishing_house_aux, string ISBN_aux, int apparence_year_aux, double price_aux) {
-	title = title_aux;
-	author = author_aux;
-	publishing_house = publishing_house_aux;
-	ISBN = ISBN_aux;
-	apparence_year = apparence_year_aux;
-	price = price_aux;
+Book::Book() {
 }
 
+Book::Book(string title, string author, string publishing_house, string ISBN, int apparence_year, double price) {
+	this->title = title;
+	this->author = author;
+	this->publishing_house = publishing_house;
+	this->ISBN = ISBN;
+	this->apparence_year = apparence_year;
+	this->price = price;
 
+
+}
+
+Book ::~Book() {
+}
+
+bool Book :: check_title(string title) {
+	if (title == this->title)
+		return 1;
+	return 0;
+}
+
+bool Book :: check_author(string author) {
+	if (author == this->author)
+		return 1;
+	return 0;
+}
+
+bool Book :: check_ISBN(string ISBN) {
+	if (ISBN == this->ISBN)
+		return 1;
+	return 0;
+}
